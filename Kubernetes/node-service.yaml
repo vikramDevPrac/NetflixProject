@@ -1,13 +1,13 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: node-exporter
-  namespace: prometheus-node-exporter
+  name: node-exporter-vr
+  namespace: prometheus-node-exporter-vr-1-ns 
 spec:
   selector:
-      app: node-exporter
+      app: node-exporter-vr
   ports:
-  - name: node-exporter
+  - name: node-exporter-vr
     protocol: TCP
     port: 9100
     targetPort: 9100
