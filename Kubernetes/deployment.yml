@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-app
+  name: netlix-app-vr
   labels:
-    app: netflix-app
+    app: netlix-app-vr
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: netflix-app
+      app: netlix-app-vr
   template:
     metadata:
       labels:
-        app: netflix-app
+        app: netlix-app-vr
     spec:
       containers:
-      - name: netflix-app
+      - name: netlix-app-vr
         image: vikramrautdocker/netflix:latest
         ports:
         - containerPort: 80
