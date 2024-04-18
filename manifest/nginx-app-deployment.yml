@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netflix-app-deployment
+  namespace: vr-1-ns
+  labels:
+    app: netflix-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: netflix-app
+  template:
+    metadata:
+      labels:
+        app: netflix-app
+    spec:
+      containers:
+        - name: k8s-task
+          image: vikramrautdocker/netflix:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: myappport
+              containerPort: 80
