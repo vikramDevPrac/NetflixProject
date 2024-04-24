@@ -9,6 +9,6 @@ spec:
   ports:
   - name: node-exporter-vr
     protocol: TCP
-    port: 9200
+    port: 80
     targetPort: 9200
   type: NodePort
