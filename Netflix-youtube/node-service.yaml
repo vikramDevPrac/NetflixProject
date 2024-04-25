@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: node-exporter-5
-  namespace: prometheus-node-exporter-vr-1-ns
+  namespace: vr-1-ne
 spec:
   selector:
       app: node-exporter-5
