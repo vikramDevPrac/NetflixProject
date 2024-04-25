@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-app
+  name: netflix-app-5
   labels:
-    app: netflix-app
+    app: netflix-app-5
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: netflix-app
+      app: netflix-app-5
   template:
     metadata:
       labels:
-        app: netflix-app
+        app: netflix-app-5
     spec:
       containers:
-      - name: netflix-app
+      - name: netflix-app-5
         image: nasi101/netflix:latest
         ports:
         - containerPort: 80
