@@ -1,23 +1,22 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: node-exporter
+  name: node-exporter3
   labels:
-    app: node-exporter
+    app: node-exporter3
 spec:
   selector:
     matchLabels:
-      app: node-exporter
+      app: node-exporter3
   template:
     metadata:
       labels:
-        app: node-exporter
-      name: node-exporter
+        app: node-exporter3
+      name: node-exporter3
     spec:
-      serviceAccountName: prometheus
       containers:
       - image: prom/node-exporter
-        name: node-exporter
+        name: node-exporter3
         ports:
         - containerPort: 9200
           hostPort: 9200
